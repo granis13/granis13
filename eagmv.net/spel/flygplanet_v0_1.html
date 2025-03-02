@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="ett spel">
+    <title>Flygplanet</title>
+  </head>
+    
+  <body>
+    <noscript>Tyvärr kan inte denna webbläsare köra detta spel köras. Felkod: noscript</noscript>
+    <script src="https://koda.nu/simple.js">
+      
+    rectangle(0, 0, totalWidth, totalHeight, "green");
+    text(totalWidth/2.5, totalHeight/6, 60, "Flygplanet", "grey");
+    rectangle(totalWidth/3, totalHeight/4, totalWidth/3, 100, "grey");
+    rectangle(totalWidth/3, totalHeight/2, totalWidth/3, 100, "grey");
+    rectangle(totalWidth/3, totalHeight/1.3, totalWidth/3, 100, "grey");
+    text(totalWidth/2.3, totalHeight/3, 50, "Start", "Black");
+    text(totalWidth/2.3, totalHeight/1.7, 50, "Start", "Black");
+    text(totalWidth/2.3, totalHeight/1.17, 50, "Start", "Black");
+  
+    var startknapp = { x: totalWidth/2, y: totalHeight/3.25 } 
+ 
+    function update()
+    {
+      var dS = distance(mouse, startknapp);
+    
+      if (dS < 150)
+      {
+        if (mouse.left)
+        {
+          window.location.href = 'sjalva_spelet_flygplanet.html';  
+        }
+      }
+    }
+    </script>
+  </body>
+</html> 
